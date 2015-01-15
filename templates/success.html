@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block content %}
+
+<h2>{{ session.username }}</h2>
+<h3>${{ session.amount }} </h3>
+
+<form action="" method=post>
+	<input type=text placeholder=STOCK name=buystock value="{{ request.form.buystock }}">
+	<input type="submit" value="Look Up">
+</form>
+{% if error == True %}
+	<p>Invalid stock. Please try again.</p>
+{% endif %}
+
+{% endblock %}
+
+<input type=text placeholder= QUANTITY name=buyvalue value="{{ request.form.buyquantity }}">

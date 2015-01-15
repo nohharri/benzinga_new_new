@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block content %}
+
+<p>Enter your name: </p>
+<form action="" method=post>
+	<input type=text id="nameInputID" placeholder=ex.John_Doe name=username value="{{ request.form.username }}">
+	<input type="submit" value="Login">
+</form>
+
+{% endblock %}

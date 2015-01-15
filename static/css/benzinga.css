@@ -1,0 +1,51 @@
+body
+{
+  background-color: #428bca;
+}
+
+.header
+{
+  padding-top: 10px;
+  font-size: 30px;
+  padding-left: 30px;
+  color: #CCCCCC;
+  background-color: #292929;
+  height: 80px;
+}
+
+#informationbox
+{
+  padding-top: 10px;
+  border-radius: 10px;
+  padding-bottom: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 20px auto;
+  width: 400px;
+  background-color: #fff;
+}
+
+#moneybox
+{
+  font-weight: bold;
+  font-size: 40px;
+  color: #292929;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+#buybutton:hover
+{
+  color: #FAAF46;
+}
+
+#sellbutton:hover
+{
+  color: #FAAF46;
+}
+
+#buyandsell:hover
+{
+  cursor: hand;
+  color: #FAAF46;
+}
