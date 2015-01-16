@@ -1,19 +1,21 @@
 from flask import *
 from functools import wraps
 from flask import request
-from flask import session, url_for, escape
+from flask import session, url_for, escape, redirect
 import requests
 import json
 import urllib2
 import base64
 import urllib
+from flask import render_template
 
+app = Flask(__name__)
+app.secret_key = '3030293942' #bad practice
 
 buying = False
 selling = False
 error = True
 data = ''
-app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -23,7 +25,10 @@ def home():
 		if 'username' not in session:
 			session['stocks'] = {}
 			session['amount'] = 10000
+			return "still working"
+			session['amount'] = 10000
 			session['username'] = request.form['username']
+			return "dskfhsdklf"
 		return redirect(url_for('success'))
 	return render_template('home.html')
 
@@ -130,5 +135,4 @@ def log():
 
 
 if __name__ == '__main__':
-	app.secret_key = '3030293942' #bad practice
 	app.run(debug=True)
