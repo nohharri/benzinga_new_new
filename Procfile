@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:5000 routes:app --log-file -
+web: gunicorn routes:app --log-file=-
